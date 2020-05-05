@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist gettext-domain="top-panel-color">
+  <schema id="org.gnome.shell.extensions.top-panel-color" path="/org/gnome/shell/extensions/top-panel-color/">
+    <key type="s" name="color">
+			<default>'rgba(0,0,0,0.5)'</default>
+			<summary>Color of Panel</summary>
+    </key>
+  </schema>
+</schemalist>

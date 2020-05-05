@@ -1,0 +1,9 @@
+{
+  "name": "Top Panel Color",
+  "description": "Colorize your top panel!",
+  "uuid": "top-panel-color@nevarman.github.com",
+  "settings-schema": "org.gnome.shell.extensions.top-panel-color",
+  "shell-version": [
+    "3.36"
+  ]
+}
