@@ -1,0 +1,10 @@
+{
+  "name": "i3 Like Workspaces",
+  "description": "Show workspaces on top bar similar to i3 wm style.",
+  "extension-id": "i3likeworkspaces",
+  "uuid": "i3likeworkspaces@nevarman.github.com",
+  "gettext-domain": "gnome-shell-extensions",
+  "shell-version": [
+    "3.36"
+  ]
+}
