@@ -6,7 +6,7 @@
 /* Modified by nevarman on 05.05.2020*/
 
 const { Clutter, Gio, GObject, Meta, St } = imports.gi;
-
+const WorkspaceSwitcherPopup = imports.ui.workspaceSwitcherPopup;
 const DND = imports.ui.dnd;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Main = imports.ui.main;
@@ -18,6 +18,7 @@ const _ = Gettext.gettext;
 
 const WORKSPACE_SCHEMA = 'org.gnome.desktop.wm.preferences';
 const WORKSPACE_KEY = 'i3likeworkspaces';
+let oldShow;
 
 let WindowPreview = GObject.registerClass({
     GTypeName: 'WorkspaceIndicatorWindowPreview',
@@ -428,6 +429,7 @@ let WorkspaceIndicator = GObject.registerClass(
 
 function init() {
     ExtensionUtils.initTranslations();
+    oldShow = WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show;
 }
 
 let _indicator;
@@ -435,8 +437,10 @@ let _indicator;
 function enable() {
     _indicator = new WorkspaceIndicator();
     Main.panel.addToStatusArea('workspace-indicator', _indicator, 0, 'left');
+    WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show = function () { return false };
 }
 
 function disable() {
     _indicator.destroy();
+    WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show = oldShow;
 }
