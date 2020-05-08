@@ -1,0 +1,8 @@
+{
+  "name": "Hide Pop Shell Button",
+  "description": "Hide Pop shell button from the top panel.",
+  "uuid": "hidepopshellbutton@nevarman.github.com",
+  "shell-version": [
+    "3.36"
+  ]
+}
