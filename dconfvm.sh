@@ -57,3 +57,5 @@ dconf write ${KEYS_MEDIA}/email "@as []"
 dconf write ${KEYS_MEDIA}/www "@as []"
 # Rotate Video Lock
 dconf write ${KEYS_MEDIA}/rotate-video-lock-static "@as []"
+
+cat dconfcustomkeys.ini | dconf load /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings
