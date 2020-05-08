@@ -15,6 +15,8 @@ Extensions that are included in this repo are:
 - i3 Like Workspaces: A modified version of Workspace indicator gnome extension: https://extensions.gnome.org/extension/21/workspace-indicator/.
 Changes are: Removed the workspace indicator borders and gave a solid color. Show workspaces horizontal and only show workspaces that is active or has a window in it. And moved the extension to the most left of the panel.
 
+- Hide Pop shell button: Hides the pop shell button from top panel. Useful if you are always using the tiling mode and not even opening the menu.
+
 ### Other Extensions I use
 
 Next to the extensions I provide these go well to provide a nice tiling wm experience:
